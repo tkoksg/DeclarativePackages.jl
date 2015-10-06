@@ -243,10 +243,10 @@ function finish()
     symlink(dir, stepout(Pkg.dir())[1:end-1])
     ENV["JULIA_PKGDIR"] = dir
 
-    log(1, "Marking $dir read-only ...")
-    run(`chmod -R 555 $dir`)
-    run(`find $dir -name .git -exec chmod -R a+w {} \;`)
-    run(`chmod 755 $dir`)
+    #log(1, "Marking $dir read-only ...")
+    #run(`chmod -R 555 $dir`)
+    #run(`find $dir -name .git -exec chmod -R a+w {} \;`)
+    #run(`chmod 755 $dir`)
 
     log(1, "Finished installing packages for $(ENV["DECLARE"]).")
 end
